@@ -1,0 +1,6 @@
+framework module Pods_AniView {
+  umbrella header "Pods-AniView-umbrella.h"
+
+  export *
+  module * { export * }
+}

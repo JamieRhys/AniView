@@ -1,0 +1,9 @@
+output = "AniViewTests/GeneratedMocks.swift"
+
+[modules.AniView]
+testableImports = ["AniView"]
+sources = [
+    "AniView/Core/Data/Remote/Client/NetworkClientProtocol.swift",
+    "AniView/Core/Data/Remote/Service/TheDogApi/TheDogApiServiceProtocol.swift",
+    "AniView/Features/Splash/Presentation/ViewModel/SplashViewModelProtocol.swift"
+]

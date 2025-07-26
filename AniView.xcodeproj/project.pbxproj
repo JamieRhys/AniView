@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		068F90D0EB978E6AC6BFA7E6 /* Pods_AniViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD322BF630EE0977896D1A92 /* Pods_AniViewTests.framework */; };
+		1DED8A849896773D5CFA5AF4 /* Pods_AniView_AniViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE301230C3D9F13BA500B50 /* Pods_AniView_AniViewUITests.framework */; };
+		BB616A2B60762BB3E105D169 /* Pods_AniView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B4D1C0CB26BD88225BBA94 /* Pods_AniView.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7D6342302E2A8C450013D336 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07FA7D1959FA4B104CD6F162 /* Pods-AniViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniViewTests.release.xcconfig"; path = "Target Support Files/Pods-AniViewTests/Pods-AniViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		16767AE4A7926A274ED13BE2 /* Pods-AniView-AniViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniView-AniViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-AniView-AniViewUITests/Pods-AniView-AniViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		17B4D1C0CB26BD88225BBA94 /* Pods_AniView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		490015356E6E44EE47A9C193 /* Pods-AniViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniViewTests.debug.xcconfig"; path = "Target Support Files/Pods-AniViewTests/Pods-AniViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A11DE3C25C5AF86AD898606 /* Pods-AniView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniView.debug.xcconfig"; path = "Target Support Files/Pods-AniView/Pods-AniView.debug.xcconfig"; sourceTree = "<group>"; };
+		67BF7C94BD9FA82F2F3F0566 /* Pods-AniView-AniViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniView-AniViewUITests.release.xcconfig"; path = "Target Support Files/Pods-AniView-AniViewUITests/Pods-AniView-AniViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D6342192E2A8C430013D336 /* AniView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D63422F2E2A8C450013D336 /* AniViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AniViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6342392E2A8C450013D336 /* AniViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AniViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D7685E2B42A5D4FE0ECC2A3 /* Pods-AniView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniView.release.xcconfig"; path = "Target Support Files/Pods-AniView/Pods-AniView.release.xcconfig"; sourceTree = "<group>"; };
+		ACE301230C3D9F13BA500B50 /* Pods_AniView_AniViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniView_AniViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD322BF630EE0977896D1A92 /* Pods_AniViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB616A2B60762BB3E105D169 /* Pods_AniView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068F90D0EB978E6AC6BFA7E6 /* Pods_AniViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DED8A849896773D5CFA5AF4 /* Pods_AniView_AniViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25D0777A384FB44F9EB9B456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17B4D1C0CB26BD88225BBA94 /* Pods_AniView.framework */,
+				ACE301230C3D9F13BA500B50 /* Pods_AniView_AniViewUITests.framework */,
+				AD322BF630EE0977896D1A92 /* Pods_AniViewTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F786A7D8B44CAC77C3FD746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A11DE3C25C5AF86AD898606 /* Pods-AniView.debug.xcconfig */,
+				9D7685E2B42A5D4FE0ECC2A3 /* Pods-AniView.release.xcconfig */,
+				16767AE4A7926A274ED13BE2 /* Pods-AniView-AniViewUITests.debug.xcconfig */,
+				67BF7C94BD9FA82F2F3F0566 /* Pods-AniView-AniViewUITests.release.xcconfig */,
+				490015356E6E44EE47A9C193 /* Pods-AniViewTests.debug.xcconfig */,
+				07FA7D1959FA4B104CD6F162 /* Pods-AniViewTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7D6342102E2A8C430013D336 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +133,8 @@
 				7D6342322E2A8C450013D336 /* AniViewTests */,
 				7D63423C2E2A8C450013D336 /* AniViewUITests */,
 				7D63421A2E2A8C430013D336 /* Products */,
+				6F786A7D8B44CAC77C3FD746 /* Pods */,
+				25D0777A384FB44F9EB9B456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D6342422E2A8C450013D336 /* Build configuration list for PBXNativeTarget "AniView" */;
 			buildPhases = (
+				634E0065828351F58DC6F3CC /* [CP] Check Pods Manifest.lock */,
+				7D8010772E32941D0018E0AC /* Run Cuckoo */,
 				7D6342152E2A8C430013D336 /* Sources */,
 				7D6342162E2A8C430013D336 /* Frameworks */,
 				7D6342172E2A8C430013D336 /* Resources */,
+				8AC2F4E1B5B79E76E3EE3F67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +170,6 @@
 				7D63421B2E2A8C430013D336 /* AniView */,
 			);
 			name = AniView;
-			packageProductDependencies = (
-			);
 			productName = AniView;
 			productReference = 7D6342192E2A8C430013D336 /* AniView.app */;
 			productType = "com.apple.product-type.application";
@@ -134,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D6342472E2A8C450013D336 /* Build configuration list for PBXNativeTarget "AniViewTests" */;
 			buildPhases = (
+				294B2C6FD468FE5533E98201 /* [CP] Check Pods Manifest.lock */,
 				7D63422B2E2A8C450013D336 /* Sources */,
 				7D63422C2E2A8C450013D336 /* Frameworks */,
 				7D63422D2E2A8C450013D336 /* Resources */,
+				D407A847AB6D4C1BCFAD26D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,8 +193,6 @@
 				7D6342322E2A8C450013D336 /* AniViewTests */,
 			);
 			name = AniViewTests;
-			packageProductDependencies = (
-			);
 			productName = AniViewTests;
 			productReference = 7D63422F2E2A8C450013D336 /* AniViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D63424A2E2A8C450013D336 /* Build configuration list for PBXNativeTarget "AniViewUITests" */;
 			buildPhases = (
+				18813B66D6C9AEBA026E8865 /* [CP] Check Pods Manifest.lock */,
 				7D6342352E2A8C450013D336 /* Sources */,
 				7D6342362E2A8C450013D336 /* Frameworks */,
 				7D6342372E2A8C450013D336 /* Resources */,
+				852723E4768FD39CBF38D786 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,8 +216,6 @@
 				7D63423C2E2A8C450013D336 /* AniViewUITests */,
 			);
 			name = AniViewUITests;
-			packageProductDependencies = (
-			);
 			productName = AniViewUITests;
 			productReference = 7D6342392E2A8C450013D336 /* AniViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +288,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18813B66D6C9AEBA026E8865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AniView-AniViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		294B2C6FD468FE5533E98201 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AniViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634E0065828351F58DC6F3CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AniView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D8010772E32941D0018E0AC /* Run Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Cuckoo";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Cuckoo/cuckoonator\"\n";
+		};
+		852723E4768FD39CBF38D786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniView-AniViewUITests/Pods-AniView-AniViewUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniView-AniViewUITests/Pods-AniView-AniViewUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AniView-AniViewUITests/Pods-AniView-AniViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AC2F4E1B5B79E76E3EE3F67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniView/Pods-AniView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniView/Pods-AniView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AniView/Pods-AniView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D407A847AB6D4C1BCFAD26D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniViewTests/Pods-AniViewTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AniViewTests/Pods-AniViewTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AniViewTests/Pods-AniViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D6342152E2A8C430013D336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,17 +478,18 @@
 /* Begin XCBuildConfiguration section */
 		7D6342432E2A8C450013D336 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A11DE3C25C5AF86AD898606 /* Pods-AniView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AniView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,17 +507,18 @@
 		};
 		7D6342442E2A8C450013D336 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7685E2B42A5D4FE0ECC2A3 /* Pods-AniView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AniView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,6 +594,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -455,17 +652,20 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		7D6342482E2A8C450013D336 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 490015356E6E44EE47A9C193 /* Pods-AniViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
@@ -480,11 +680,13 @@
 		};
 		7D6342492E2A8C450013D336 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FA7D1959FA4B104CD6F162 /* Pods-AniViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
@@ -499,10 +701,12 @@
 		};
 		7D63424B2E2A8C450013D336 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16767AE4A7926A274ED13BE2 /* Pods-AniView-AniViewUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.jaffakree.AniViewUITests;
@@ -516,10 +720,12 @@
 		};
 		7D63424C2E2A8C450013D336 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BF7C94BD9FA82F2F3F0566 /* Pods-AniView-AniViewUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 685B4G8J9B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.jaffakree.AniViewUITests;

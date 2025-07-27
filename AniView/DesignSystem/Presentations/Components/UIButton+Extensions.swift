@@ -11,13 +11,14 @@ extension UIButton.Configuration {
     private static var baseConfiguration: UIButton.Configuration {
         var config = UIButton.Configuration.filled()
         
-        config.cornerStyle = .medium
+        config.cornerStyle = .capsule
         config.contentInsets = NSDirectionalEdgeInsets(
-            top: AppSpacing.small,
-            leading: AppSpacing.medium,
-            bottom: AppSpacing.small,
-            trailing: AppSpacing.medium
+            top: AppSpacing.zero,
+            leading: AppSpacing.small,
+            bottom: AppSpacing.zero,
+            trailing: AppSpacing.small
         )
+        
         
         return config
     }
@@ -38,6 +39,16 @@ extension UIButton.Configuration {
         config.baseBackgroundColor = AppColor.secondary
         config.baseForegroundColor = AppColor.onSecondary
         config.title = title
+        
+        return config
+    }
+    
+    static func icon(systemImageName: String) -> UIButton.Configuration {
+        var config = baseConfiguration
+        
+        config.image = UIImage(systemName: systemImageName)
+        config.baseBackgroundColor = .clear
+        config.baseForegroundColor = AppColor.primary
         
         return config
     }

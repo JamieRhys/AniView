@@ -43,6 +43,8 @@ final class TheDogApiServiceTests: XCTestCase {
     func test_fetchAllBreeds_whenSuccessResponse_thenBreedsReturned() async {
         let expected = [
             BreedDto(
+                id: 1,
+                name: "Affenpinscher",
                 weight: MeasurementDto(
                     imperial: "6 - 13",
                     metric: "3 - 6"
@@ -51,8 +53,6 @@ final class TheDogApiServiceTests: XCTestCase {
                     imperial: "9 - 11.5",
                     metric: "23 - 29"
                 ),
-                id: 1,
-                name: "Affenpinscher",
                 bred_for: "Small rodent hunting, lapdog",
                 breed_group: "Toy",
                 life_span: "10 - 12 years",
@@ -67,6 +67,8 @@ final class TheDogApiServiceTests: XCTestCase {
                 )
             ),
             BreedDto(
+                id: 2,
+                name: "Afghan Hound",
                 weight: MeasurementDto(
                     imperial: "50 - 60",
                     metric: "23 - 27"
@@ -75,8 +77,6 @@ final class TheDogApiServiceTests: XCTestCase {
                     imperial: "25 - 27",
                     metric: "64 - 69"
                 ),
-                id: 2,
-                name: "Afghan Hound",
                 bred_for: "Coursing and hunting",
                 breed_group: "Hound",
                 life_span: "10 - 13 years",

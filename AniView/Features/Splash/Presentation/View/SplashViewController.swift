@@ -13,9 +13,8 @@ final class SplashViewController: UIViewController {
     private let viewModel: SplashViewModel
     var coordinator: SplashCoordinator?
     
-    private let mainContainer = UIStackView()
-    
     private let labelTitle = UILabel.headline(text: NSLocalizedString("label.app_name", comment: "Title of the app"))
+    private let progressIndicator = UIActivityIndicatorView(style: .large)
     
     init(viewModel: SplashViewModel) {
         self.viewModel = viewModel
@@ -26,8 +25,9 @@ final class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coordinator?.startTimer()
         setupUi()
+        setupConstraints()
+        coordinator?.startTimer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -46,11 +46,18 @@ final class SplashViewController: UIViewController {
         labelTitle.textAlignment = .center
         
         view.addSubview(labelTitle)
-        
+        view.addSubview(progressIndicator)
+    }
+    
+    private func setupConstraints() {
         labelTitle.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
-
+        
+        progressIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(labelTitle.snp.bottom).offset(16)
+        }
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import OSLog
+import RealmSwift
 
 class SplashCoordinator: CoordinatorProtocol {
     var childCoordinators = [CoordinatorProtocol]()
@@ -14,9 +15,21 @@ class SplashCoordinator: CoordinatorProtocol {
     weak var parentCoordinator: MainCoordinator?
     
     private var vc: SplashViewController
+    private let repository: SplashRepositoryProtocol
     
-    init(navController: UINavigationController) {
+    init(
+        navController: UINavigationController,
+        apiService: TheDogApiServiceProtocol,
+        realm: Realm,
+        breedMapper: BreedMapper,
+    ) {
         self.navController = navController
+        
+        self.repository = SplashRepository(
+            apiService: apiService,
+            realm: realm,
+            breedMapper: breedMapper
+        )
         
         self.vc = SplashViewController(
             viewModel: SplashViewModel()
@@ -26,6 +39,11 @@ class SplashCoordinator: CoordinatorProtocol {
     func start() {
         vc.coordinator = self
         navController.setViewControllers([vc], animated: true)
+        
+        // TEST CODE:
+        Task {
+            try? await repository.fetchAllBreeds(completion: { _ in })
+        }
     }
     
     func end() {
@@ -33,7 +51,7 @@ class SplashCoordinator: CoordinatorProtocol {
     }
     
     func startTimer() {
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] _ in
             Logger.viewcycle.debug("Auto-switching to Search Screen")
             self?.parentCoordinator?.showSearchScreen()
         }

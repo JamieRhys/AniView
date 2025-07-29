@@ -8,13 +8,29 @@
 import UIKit
 import OSLog
 import UIKit
+import RealmSwift
 
 final class MainCoordinator: CoordinatorProtocol {
     var childCoordinators = [CoordinatorProtocol]()
     var navController: UINavigationController
     
+    private let networkClient: NetworkClientProtocol
+    private let apiService: TheDogApiServiceProtocol
+    private let realm: Realm
+    private let breedMapper: BreedMapper
+    
     init(navController: UINavigationController) {
         self.navController = navController
+        
+        self.networkClient = AlamofireNetworkClient()
+        self.apiService = TheDogApiService(networkClient: networkClient)
+        self.breedMapper = BreedMapper()
+        
+        do {
+            self.realm = try Realm()
+        } catch let error {
+            fatalError("Unable to initialize Realm: \(error)")
+        }
     }
     
     func start() {
@@ -33,6 +49,9 @@ final class MainCoordinator: CoordinatorProtocol {
     func showSplashScreen() {
         let child = SplashCoordinator(
             navController: navController,
+            apiService: apiService,
+            realm: realm,
+            breedMapper: breedMapper,
         )
         childCoordinators.append(child)
         child.parentCoordinator = self

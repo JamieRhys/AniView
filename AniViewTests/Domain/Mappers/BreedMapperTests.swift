@@ -114,7 +114,8 @@ final class BreedMapperTest : XCTestCase {
  */
     
     func test_toRealm_Success() {
-        let expected = RealmBreed(
+        var expected = [RealmBreed]()
+        expected.append(RealmBreed(
             id: 1,
             name: "Test dog",
             weight: RealmMeasurement(imperial: "Test", metric: "Test"),
@@ -130,39 +131,41 @@ final class BreedMapperTest : XCTestCase {
                 height: 128,
                 url: "TestURL"
             )
-        )
+        ))
         
-        let dto = BreedDto(
-            id: 1,
-            name: "Test dog",
-            weight: MeasurementDto(imperial: "Test", metric: "Test"),
-            height: MeasurementDto(imperial: "Test", metric: "Test"),
-            bred_for: "One, Two, Three",
-            breed_group: "Test",
-            life_span: "Test",
-            temperament: "Test",
-            origin: "Test",
-            reference_image_id: "TestID",
-            image: ImageDto(
-                id: "TestID",
-                width: 128,
-                height: 128,
-                url: "TestURL"
-            )
-        )
+        var dto: [BreedDto] = [BreedDto]()
+        dto.append(BreedDto(
+                id: 1,
+                name: "Test dog",
+                weight: MeasurementDto(imperial: "Test", metric: "Test"),
+                height: MeasurementDto(imperial: "Test", metric: "Test"),
+                bred_for: "One, Two, Three",
+                breed_group: "Test",
+                life_span: "Test",
+                temperament: "Test",
+                origin: "Test",
+                reference_image_id: "TestID",
+                image: ImageDto(
+                    id: "TestID",
+                    width: 128,
+                    height: 128,
+                    url: "TestURL"
+                )
+        ))
         
         guard let actual = try? sut.toRealm(from: dto) else {
             XCTFail("Expected to pass.")
             return // to satisfy xcode
         }
         
-        XCTAssertEqual(expected.id, actual.id)
-        XCTAssertEqual(expected.name, actual.name)
-        XCTAssertEqual(expected.bredFor, actual.bredFor)
+        XCTAssertEqual(expected[0].id, actual[0].id)
+        XCTAssertEqual(expected[0].name, actual[0].name)
+        XCTAssertEqual(expected[0].bredFor, actual[0].bredFor)
     }
     
     func test_toRealm_whereOptionalsAreNil_Success() {
-        let expected = RealmBreed(
+        var expected = [RealmBreed]()
+        expected.append(RealmBreed(
             id: 1,
             name: "Test dog",
             weight: nil,
@@ -173,8 +176,9 @@ final class BreedMapperTest : XCTestCase {
             temperament: nil,
             origin: nil,
             image: nil
-        )
-        let dto = BreedDto(
+        ))
+        var dto = [BreedDto]()
+        dto.append(BreedDto(
             id: 1,
             name: "Test dog",
             weight: nil,
@@ -186,20 +190,21 @@ final class BreedMapperTest : XCTestCase {
             origin: nil,
             reference_image_id: nil,
             image: nil
-        )
+        ))
         
         guard let actual = try? sut.toRealm(from: dto) else {
             XCTFail("Expected to pass.")
             return // to satisfy xcode
         }
         
-        XCTAssertEqual(expected.id, actual.id)
-        XCTAssertEqual(expected.name, actual.name)
-        XCTAssertEqual(expected.bredFor, actual.bredFor)
+        XCTAssertEqual(expected[0].id, actual[0].id)
+        XCTAssertEqual(expected[0].name, actual[0].name)
+        XCTAssertEqual(expected[0].bredFor, actual[0].bredFor)
     }
     
     func test_toRealm_whenIdIsNull_thenMissingValueErrorThrown() {
-        let dto = BreedDto(
+        var dto = [BreedDto]()
+        dto.append(BreedDto(
             id: nil,
             name: "Test dog",
             weight: nil,
@@ -211,7 +216,7 @@ final class BreedMapperTest : XCTestCase {
             origin: nil,
             reference_image_id: nil,
             image: nil
-        )
+        ))
         
         do {
             _ = try sut.toRealm(from: dto)
@@ -227,7 +232,8 @@ final class BreedMapperTest : XCTestCase {
     }
     
     func test_toRealm_whenNameIsNull_thenMissingValueErrorThrown() {
-        let dto = BreedDto(
+        var dto = [BreedDto]()
+        dto.append(BreedDto(
             id: 1,
             name: nil,
             weight: nil,
@@ -239,7 +245,7 @@ final class BreedMapperTest : XCTestCase {
             origin: nil,
             reference_image_id: nil,
             image: nil
-        )
+        ))
         
         do {
             _ = try sut.toRealm(from: dto)

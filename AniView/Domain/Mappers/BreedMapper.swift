@@ -31,28 +31,30 @@ final class BreedMapper {
         )
     }
 
-    func toRealm(from dto: BreedDto) throws -> RealmBreed {
-        guard let id = dto.id else { throw MappingErrors.missingValue("breed.id") }
-        guard let name = dto.name else { throw MappingErrors.missingValue("breed.name") }
-        
-        return RealmBreed(
-            id: id,
-            name: name,
-            weight: dto.weight.map { RealmMeasurement(imperial: $0.imperial, metric: $0.metric) },
-            height: dto.height.map { RealmMeasurement(imperial: $0.imperial, metric: $0.metric) },
-            bredFor: dto.bred_for,
-            breedGroup: dto.breed_group,
-            lifeSpan: dto.life_span,
-            temperament: dto.temperament,
-            origin: dto.origin,
-            image: dto.image.map {
-                RealmImage(
-                    id: $0.id,
-                    width: $0.width,
-                    height: $0.height,
-                    url: $0.url
-                )
-            }
-        )
+    func toRealm(from dto: [BreedDto]) throws -> [RealmBreed] {
+        try dto.map {
+            guard let id = $0.id else { throw MappingErrors.missingValue("breed.id") }
+            guard let name = $0.name else { throw MappingErrors.missingValue("breed.name") }
+            
+            return RealmBreed(
+                id: id,
+                name: name,
+                weight: $0.weight.map { RealmMeasurement(imperial: $0.imperial, metric: $0.metric) },
+                height: $0.height.map { RealmMeasurement(imperial: $0.imperial, metric: $0.metric) },
+                bredFor: $0.bred_for,
+                breedGroup: $0.breed_group,
+                lifeSpan: $0.life_span,
+                temperament: $0.temperament,
+                origin: $0.origin,
+                image: $0.image.map {
+                    RealmImage(
+                        id: $0.id,
+                        width: $0.width,
+                        height: $0.height,
+                        url: $0.url
+                    )
+                }
+            )
+        }
     }
 }

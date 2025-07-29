@@ -13,12 +13,10 @@ final class SearchViewController: UIViewController {
     var coordinator: SearchCoordinator?
     
     private let topBar = UIStackView()
-    
     private let labelAppTitle = UILabel.body(text: "AniView")
-    
     private let textfieldSearch = UITextField.capsulePrimary(placeholder: "Search for dogs...")
-    
     private let buttonRandom = UIButton(configuration: .icon(systemImageName: "shuffle.circle.fill"))
+    private let resultsTable = UITableView()
     
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
@@ -39,6 +37,8 @@ final class SearchViewController: UIViewController {
     }
     
     private func setupUi() {
+        view.backgroundColor = AppColor.background
+        
         topBar.backgroundColor = AppColor.surface
         topBar.axis = .horizontal
         topBar.alignment = .center
@@ -52,16 +52,24 @@ final class SearchViewController: UIViewController {
             right: AppSpacing.medium
         )
         topBar.addArrangedSubview(labelAppTitle)
-        
         topBar.addArrangedSubview(textfieldSearch)
-        
         topBar.addArrangedSubview(buttonRandom)
+        
+        resultsTable.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        resultsTable.backgroundColor = .blue
+        view.addSubview(resultsTable)
     }
     
     private func setupConstraints() {
         topBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.leading.trailing.equalToSuperview().inset(AppSpacing.large)
+        }
+        
+        resultsTable.snp.makeConstraints { make in
+            make.top.equalTo(topBar.snp.bottom).offset(AppSpacing.medium)
+            make.leading.trailing.equalToSuperview().inset(AppSpacing.medium)
+            make.bottom.equalToSuperview().inset(AppSpacing.large)
         }
     }
 }

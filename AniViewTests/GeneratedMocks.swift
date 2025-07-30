@@ -85,6 +85,92 @@ class NetworkClientProtocolStub:NetworkClientProtocol, @unchecked Sendable {
 
 
 
+// MARK: - Mocks generated from file: 'AniView/Core/Data/Remote/Services/TheDogApi/TheDogApiServiceProtocol.swift'
+
+import Cuckoo
+import Foundation
+@testable import AniView
+
+class MockTheDogApiServiceProtocol: TheDogApiServiceProtocol, Cuckoo.ProtocolMock, @unchecked Sendable {
+    typealias MocksType = TheDogApiServiceProtocol
+    typealias Stubbing = __StubbingProxy_TheDogApiServiceProtocol
+    typealias Verification = __VerificationProxy_TheDogApiServiceProtocol
+
+    // Original typealiases
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: (any TheDogApiServiceProtocol)?
+
+    func enableDefaultImplementation(_ stub: any TheDogApiServiceProtocol) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    
+    func fetchAllBreeds(completion p0: @escaping (Result<[BreedDto], Error>) -> Void) async {
+        return await cuckoo_manager.call(
+            "fetchAllBreeds(completion p0: @escaping (Result<[BreedDto], Error>) -> Void) async",
+            parameters: (p0),
+            escapingParameters: (p0),
+            superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+            defaultCall: await __defaultImplStub!.fetchAllBreeds(completion: p0)
+        )
+    }
+
+    struct __StubbingProxy_TheDogApiServiceProtocol: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+    
+        init(manager: Cuckoo.MockManager) {
+            self.cuckoo_manager = manager
+        }
+        
+        func fetchAllBreeds<M1: Cuckoo.Matchable>(completion p0: M1) -> Cuckoo.ProtocolStubNoReturnFunction<( (Result<[BreedDto], Error>) -> Void)> where M1.MatchedType ==  (Result<[BreedDto], Error>) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<( (Result<[BreedDto], Error>) -> Void)>] = [wrap(matchable: p0) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockTheDogApiServiceProtocol.self,
+                method: "fetchAllBreeds(completion p0: @escaping (Result<[BreedDto], Error>) -> Void) async",
+                parameterMatchers: matchers
+            ))
+        }
+    }
+
+    struct __VerificationProxy_TheDogApiServiceProtocol: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+    
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            self.cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+        
+        
+        @discardableResult
+        func fetchAllBreeds<M1: Cuckoo.Matchable>(completion p0: M1) -> Cuckoo.__DoNotUse<( (Result<[BreedDto], Error>) -> Void), Void> where M1.MatchedType ==  (Result<[BreedDto], Error>) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<( (Result<[BreedDto], Error>) -> Void)>] = [wrap(matchable: p0) { $0 }]
+            return cuckoo_manager.verify(
+                "fetchAllBreeds(completion p0: @escaping (Result<[BreedDto], Error>) -> Void) async",
+                callMatcher: callMatcher,
+                parameterMatchers: matchers,
+                sourceLocation: sourceLocation
+            )
+        }
+    }
+}
+
+class TheDogApiServiceProtocolStub:TheDogApiServiceProtocol, @unchecked Sendable {
+
+
+    
+    func fetchAllBreeds(completion p0: @escaping (Result<[BreedDto], Error>) -> Void) async {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+}
+
+
+
+
 // MARK: - Mocks generated from file: 'AniView/Features/Splash/Presentation/ViewModel/SplashViewModelProtocol.swift'
 
 import Cuckoo

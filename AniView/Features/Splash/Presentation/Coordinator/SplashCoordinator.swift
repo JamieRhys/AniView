@@ -20,14 +20,12 @@ class SplashCoordinator: CoordinatorProtocol {
     init(
         navController: UINavigationController,
         apiService: TheDogApiServiceProtocol,
-        realm: Realm,
         breedMapper: BreedMapper,
     ) {
         self.navController = navController
         
         self.repository = SplashRepository(
             apiService: apiService,
-            realm: realm,
             breedMapper: breedMapper
         )
         

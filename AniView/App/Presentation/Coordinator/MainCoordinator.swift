@@ -16,7 +16,6 @@ final class MainCoordinator: CoordinatorProtocol {
     
     private let networkClient: NetworkClientProtocol
     private let apiService: TheDogApiServiceProtocol
-    private let realm: Realm
     private let breedMapper: BreedMapper
     
     init(navController: UINavigationController) {
@@ -25,12 +24,6 @@ final class MainCoordinator: CoordinatorProtocol {
         self.networkClient = AlamofireNetworkClient()
         self.apiService = TheDogApiService(networkClient: networkClient)
         self.breedMapper = BreedMapper()
-        
-        do {
-            self.realm = try Realm()
-        } catch let error {
-            fatalError("Unable to initialize Realm: \(error)")
-        }
     }
     
     func start() {
@@ -50,7 +43,6 @@ final class MainCoordinator: CoordinatorProtocol {
         let child = SplashCoordinator(
             navController: navController,
             apiService: apiService,
-            realm: realm,
             breedMapper: breedMapper,
         )
         childCoordinators.append(child)

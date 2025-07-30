@@ -11,15 +11,12 @@ import RealmSwift
 final class SplashRepository: SplashRepositoryProtocol {
     private let apiService: TheDogApiServiceProtocol
     private let breedMapper: BreedMapper
-    private let realm: Realm
     
     init(
         apiService: TheDogApiServiceProtocol,
-        realm: Realm,
         breedMapper: BreedMapper
     ) {
         self.apiService = apiService
-        self.realm = realm
         self.breedMapper = breedMapper
     }
     
@@ -28,12 +25,13 @@ final class SplashRepository: SplashRepositoryProtocol {
             switch result {
             case .success(let dto):
                 do {
+                    let realm = try Realm()
                     let realms = try self.breedMapper.toRealm(from: dto)
-                    try self.realm.write {
-                        self.realm.add(realms, update: .all)
+                    try realm.write {
+                        realm.add(realms, update: .all)
                     }
                     completion(.success(nil))
-                } catch {
+                } catch let error as NSError {
                     completion(.failure(error))
                 }
             case .failure(let result):

@@ -3,6 +3,7 @@ output = "AniViewTests/GeneratedMocks.swift"
 [modules.AniView]
 testableImports = ["AniView"]
 sources = [
+    "AniView/Core/Data/Local/Database/PersistenceStoreProtocol.swift",
     "AniView/Core/Data/Remote/Client/NetworkClientProtocol.swift",
     "AniView/Core/Data/Remote/Services/TheDogApi/TheDogApiServiceProtocol.swift",
     "AniView/Features/Splash/Presentation/ViewModel/SplashViewModelProtocol.swift"

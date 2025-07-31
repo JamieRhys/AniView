@@ -1,3 +1,158 @@
+// MARK: - Mocks generated from file: 'AniView/Core/Data/Local/Database/PersistenceStoreProtocol.swift'
+
+import Cuckoo
+import Foundation
+import RealmSwift
+@testable import AniView
+
+class MockPersistenceStoreProtocol: PersistenceStoreProtocol, Cuckoo.ProtocolMock, @unchecked Sendable {
+    typealias MocksType = PersistenceStoreProtocol
+    typealias Stubbing = __StubbingProxy_PersistenceStoreProtocol
+    typealias Verification = __VerificationProxy_PersistenceStoreProtocol
+
+    // Original typealiases
+
+    let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    private var __defaultImplStub: (any PersistenceStoreProtocol)?
+
+    func enableDefaultImplementation(_ stub: any PersistenceStoreProtocol) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+
+    
+    func save<T: Object> (_ p0: T) throws {
+        return try cuckoo_manager.callThrows(
+            "save<T: Object> (_ p0: T) throws",
+            parameters: (p0),
+            escapingParameters: (p0),
+errorType: Error.self,            superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+            defaultCall: __defaultImplStub!.save(p0)
+        )
+    }
+    
+    func save<T: Object> (_ p0: [T]) throws {
+        return try cuckoo_manager.callThrows(
+            "save<T: Object> (_ p0: [T]) throws",
+            parameters: (p0),
+            escapingParameters: (p0),
+errorType: Error.self,            superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+            defaultCall: __defaultImplStub!.save(p0)
+        )
+    }
+    
+    func fetch<T: Object> (_ p0: T.Type, filter p1: NSPredicate?) throws -> [T] {
+        return try cuckoo_manager.callThrows(
+            "fetch<T: Object> (_ p0: T.Type, filter p1: NSPredicate?) throws -> [T]",
+            parameters: (p0, p1),
+            escapingParameters: (p0, p1),
+errorType: Error.self,            superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+            defaultCall: __defaultImplStub!.fetch(p0, filter: p1)
+        )
+    }
+
+    struct __StubbingProxy_PersistenceStoreProtocol: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+    
+        init(manager: Cuckoo.MockManager) {
+            self.cuckoo_manager = manager
+        }
+        
+        func save<M1: Cuckoo.Matchable, T: Object>(_ p0: M1) -> Cuckoo.ProtocolStubNoReturnThrowingFunction<(T),Error> where M1.MatchedType == T {
+            let matchers: [Cuckoo.ParameterMatcher<(T)>] = [wrap(matchable: p0) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockPersistenceStoreProtocol.self,
+                method: "save<T: Object> (_ p0: T) throws",
+                parameterMatchers: matchers
+            ))
+        }
+        
+        func save<M1: Cuckoo.Matchable, T: Object>(_ p0: M1) -> Cuckoo.ProtocolStubNoReturnThrowingFunction<([T]),Error> where M1.MatchedType == [T] {
+            let matchers: [Cuckoo.ParameterMatcher<([T])>] = [wrap(matchable: p0) { $0 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockPersistenceStoreProtocol.self,
+                method: "save<T: Object> (_ p0: [T]) throws",
+                parameterMatchers: matchers
+            ))
+        }
+        
+        func fetch<M1: Cuckoo.Matchable, M2: Cuckoo.OptionalMatchable, T: Object>(_ p0: M1, filter p1: M2) -> Cuckoo.ProtocolStubThrowingFunction<(T.Type, NSPredicate?), [T],Error> where M1.MatchedType == T.Type, M2.OptionalMatchedType == NSPredicate {
+            let matchers: [Cuckoo.ParameterMatcher<(T.Type, NSPredicate?)>] = [wrap(matchable: p0) { $0.0 }, wrap(matchable: p1) { $0.1 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockPersistenceStoreProtocol.self,
+                method: "fetch<T: Object> (_ p0: T.Type, filter p1: NSPredicate?) throws -> [T]",
+                parameterMatchers: matchers
+            ))
+        }
+    }
+
+    struct __VerificationProxy_PersistenceStoreProtocol: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+    
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            self.cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+        
+        
+        @discardableResult
+        func save<M1: Cuckoo.Matchable, T: Object>(_ p0: M1) -> Cuckoo.__DoNotUse<(T), Void> where M1.MatchedType == T {
+            let matchers: [Cuckoo.ParameterMatcher<(T)>] = [wrap(matchable: p0) { $0 }]
+            return cuckoo_manager.verify(
+                "save<T: Object> (_ p0: T) throws",
+                callMatcher: callMatcher,
+                parameterMatchers: matchers,
+                sourceLocation: sourceLocation
+            )
+        }
+        
+        
+        @discardableResult
+        func save<M1: Cuckoo.Matchable, T: Object>(_ p0: M1) -> Cuckoo.__DoNotUse<([T]), Void> where M1.MatchedType == [T] {
+            let matchers: [Cuckoo.ParameterMatcher<([T])>] = [wrap(matchable: p0) { $0 }]
+            return cuckoo_manager.verify(
+                "save<T: Object> (_ p0: [T]) throws",
+                callMatcher: callMatcher,
+                parameterMatchers: matchers,
+                sourceLocation: sourceLocation
+            )
+        }
+        
+        
+        @discardableResult
+        func fetch<M1: Cuckoo.Matchable, M2: Cuckoo.OptionalMatchable, T: Object>(_ p0: M1, filter p1: M2) -> Cuckoo.__DoNotUse<(T.Type, NSPredicate?), [T]> where M1.MatchedType == T.Type, M2.OptionalMatchedType == NSPredicate {
+            let matchers: [Cuckoo.ParameterMatcher<(T.Type, NSPredicate?)>] = [wrap(matchable: p0) { $0.0 }, wrap(matchable: p1) { $0.1 }]
+            return cuckoo_manager.verify(
+                "fetch<T: Object> (_ p0: T.Type, filter p1: NSPredicate?) throws -> [T]",
+                callMatcher: callMatcher,
+                parameterMatchers: matchers,
+                sourceLocation: sourceLocation
+            )
+        }
+    }
+}
+
+class PersistenceStoreProtocolStub:PersistenceStoreProtocol, @unchecked Sendable {
+
+
+    
+    func save<T: Object> (_ p0: T) throws {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    func save<T: Object> (_ p0: [T]) throws {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    func fetch<T: Object> (_ p0: T.Type, filter p1: NSPredicate?) throws -> [T] {
+        return DefaultValueRegistry.defaultValue(for: ([T]).self)
+    }
+}
+
+
+
+
 // MARK: - Mocks generated from file: 'AniView/Core/Data/Remote/Client/NetworkClientProtocol.swift'
 
 import Cuckoo
@@ -175,6 +330,7 @@ class TheDogApiServiceProtocolStub:TheDogApiServiceProtocol, @unchecked Sendable
 
 import Cuckoo
 import Foundation
+import RxCocoa
 @testable import AniView
 
 class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock, @unchecked Sendable {
@@ -192,6 +348,16 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
         __defaultImplStub = stub
         cuckoo_manager.enableDefaultStubImplementation()
     }
+    
+    var loadingState: Driver<LoadingState> {
+        get {
+            return cuckoo_manager.getter(
+                "loadingState",
+                superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+                defaultCall: __defaultImplStub!.loadingState
+            )
+        }
+    }
 
 
     struct __StubbingProxy_SplashViewModelProtocol: Cuckoo.StubbingProxy {
@@ -199,6 +365,10 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
     
         init(manager: Cuckoo.MockManager) {
             self.cuckoo_manager = manager
+        }
+        
+        var loadingState: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSplashViewModelProtocol,Driver<LoadingState>> {
+            return .init(manager: cuckoo_manager, name: "loadingState")
         }
     }
 
@@ -212,10 +382,20 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
             self.callMatcher = callMatcher
             self.sourceLocation = sourceLocation
         }
+        
+        var loadingState: Cuckoo.VerifyReadOnlyProperty<Driver<LoadingState>> {
+            return .init(manager: cuckoo_manager, name: "loadingState", callMatcher: callMatcher, sourceLocation: sourceLocation)
+        }
     }
 }
 
 class SplashViewModelProtocolStub:SplashViewModelProtocol, @unchecked Sendable {
+    
+    var loadingState: Driver<LoadingState> {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Driver<LoadingState>).self)
+        }
+    }
 
 
 }

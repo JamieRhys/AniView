@@ -10,13 +10,16 @@ import RealmSwift
 
 final class SplashRepository: SplashRepositoryProtocol {
     private let apiService: TheDogApiServiceProtocol
+    private let persistenceStore: PersistenceStoreProtocol
     private let breedMapper: BreedMapper
     
     init(
         apiService: TheDogApiServiceProtocol,
+        persistenceStore: PersistenceStoreProtocol,
         breedMapper: BreedMapper
     ) {
         self.apiService = apiService
+        self.persistenceStore = persistenceStore
         self.breedMapper = breedMapper
     }
     
@@ -25,11 +28,7 @@ final class SplashRepository: SplashRepositoryProtocol {
             switch result {
             case .success(let dto):
                 do {
-                    let realm = try Realm()
-                    let realms = try self.breedMapper.toRealm(from: dto)
-                    try realm.write {
-                        realm.add(realms, update: .all)
-                    }
+                    try self.persistenceStore.save(try self.breedMapper.toRealm(from: dto))
                     completion(.success(nil))
                 } catch let error as NSError {
                     completion(.failure(error))

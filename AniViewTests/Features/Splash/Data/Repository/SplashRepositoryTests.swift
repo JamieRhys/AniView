@@ -19,17 +19,19 @@ final class SplashRepositoryTests: XCTestCase {
     
     var sut: SplashRepositoryProtocol!
     
-    private var apiService: MockTheDogApiServiceProtocol!
+    private var mockApiService: MockTheDogApiServiceProtocol!
+    private var mockPersistenceStore: MockPersistenceStoreProtocol!
     private var breedMapper: BreedMapper!
     
     override func setUp() {
         super.setUp()
         
-        self.apiService = MockTheDogApiServiceProtocol()
+        self.mockApiService = MockTheDogApiServiceProtocol()
         self.breedMapper = BreedMapper()
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+        mockPersistenceStore = MockPersistenceStoreProtocol()
         self.sut = SplashRepository(
-            apiService: apiService,
+            apiService: mockApiService,
+            persistenceStore: mockPersistenceStore,
             breedMapper: breedMapper,
         )
     }
@@ -38,7 +40,8 @@ final class SplashRepositoryTests: XCTestCase {
         super.tearDown()
         
         self.sut = nil
-        self.apiService = nil
+        self.mockApiService = nil
+        self.mockPersistenceStore = nil
         self.breedMapper = nil
     }
     
@@ -47,56 +50,78 @@ final class SplashRepositoryTests: XCTestCase {
  * Fetch All Breeds
  * ==========================================================================
  */
-    
-    func test_fetchAllBreeds_whenCalled_thenFetchesDataFromApiAndSavesToRealm() async {
-        var dto: [BreedDto] = [BreedDto]()
-        for i in 0...10 {
-            dto.append(
-                BreedDto(
-                    id: i,
-                    name: "Dog \(i)",
-                    weight: MeasurementDto(imperial: "", metric: ""),
-                    height: MeasurementDto(imperial: "", metric: ""),
-                    bred_for: "Test, Test, Test",
-                    breed_group: "Test",
-                    life_span: "Test",
-                    temperament: "Test",
-                    origin: "Test",
-                    reference_image_id: "TestID",
-                    image: ImageDto(
-                        id: "TestID",
-                        width: 128,
-                        height: 128,
-                        url: "Test.example.com/test-image.png"
-                    )
-                )
-            )
+    func test_fetchAllBreeds_shouldCallApiServiceAndSaveToDatabase() async {
+        var dto = [BreedDto]()
+        for i in 1...10 {
+            dto.append(BreedDto(
+                id: i,
+                name: "Test Dog \(i)",
+                weight: MeasurementDto(imperial: "10lb", metric: "4.5kg"),
+                height: MeasurementDto(imperial: "11\"", metric: "28cm"),
+                bred_for: "Test, Bred, For",
+                breed_group: "Test",
+                life_span: "10 - 12 years",
+                temperament: "Test",
+                origin: "UK, France",
+                reference_image_id: "TestID",
+                image: ImageDto(id: "TestID", width: 128, height: 128, url: "test-url.com")
+            ))
+        }
+        let realmObject = try! breedMapper.toRealm(from: dto)
+        
+        stub(mockApiService) { stub in
+            when(stub.fetchAllBreeds(completion: any())).then { completion in
+                    completion(.success(dto))
+            }
         }
         
-        stub(apiService) { stub in
-            stub.fetchAllBreeds(completion: any()).then { completion in completion(.success(dto)) }
+        stub(mockPersistenceStore) { stub in
+            when(stub.save(any([RealmBreed].self))).thenDoNothing()
+            when(stub.fetch(any(), filter: any())).thenReturn(realmObject)
         }
         
         await sut.fetchAllBreeds { result in
             switch result {
             case .success(_):
                 XCTAssertTrue(true)
-            case .failure(let error): XCTFail("Expected this to pass. Got: \(error)")
+            case .failure(let error):
+                XCTFail("Unexpected error: \(error)")
             }
         }
     }
     
-    func test_fetchAllBreeds_whenApiErrorOccurs_thenErrorIsPassedBackAsFailure() async {
-        stub(apiService) { stub in
-            stub.fetchAllBreeds(completion: any()).then { completion in
-                completion(.failure(ApiErrors.unknownError(NSError(domain: "unknown_error", code: 0, userInfo: nil))))
+    func test_fetchAllBreeds_whenDatabaseReturnsError_thenErrorShouldBeReturnedAsFailure() async {
+        stub(mockApiService) { stub in
+            when(stub.fetchAllBreeds(completion: any())).then { completion in
+                completion(.success([BreedDto]()))
             }
         }
         
-        await sut.fetchAllBreeds { result in
+        stub(mockPersistenceStore) { stub in
+            when(stub.save(any([RealmBreed].self))).thenThrow(NSError(domain: "test_error", code: 0, userInfo: nil))
+        }
+        
+        await sut.fetchAllBreeds() { result in
             switch result {
             case .success(_):
-                XCTFail("Expected failure to occur.")
+                XCTFail("Expected to fail")
+            case .failure(_):
+                XCTAssertTrue(true)
+            }
+        }
+    }
+    
+    func test_fetchAllBreeds_whenApiServiceReturnsError_thenErrorShouldBeReturnedAsFailure() async {
+        stub(mockApiService) { stub in
+            when(stub.fetchAllBreeds(completion: any())).then { completion in
+                completion(.failure(ApiErrors.unknownError(NSError(domain: "test_error", code: 0, userInfo: nil))))
+            }
+        }
+        
+        await sut.fetchAllBreeds() { result in
+            switch result {
+            case .success(_):
+                XCTFail("Unexpected failure")
             case .failure(_):
                 XCTAssertTrue(true)
             }

@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         let navController = UINavigationController()
-        let coordinator = MainCoordinator(navController: navController)
+        guard let coordinator = try? MainCoordinator(navController: navController) else {
+            fatalError("Could not create the MainCoordinator.")
+        }
         coordinator.start()
         
         let window = UIWindow(windowScene: windowScene)

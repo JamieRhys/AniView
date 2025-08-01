@@ -20,35 +20,34 @@ class SplashCoordinator: CoordinatorProtocol {
     init(
         navController: UINavigationController,
         apiService: TheDogApiServiceProtocol,
+        persistenceStore: PersistenceStoreProtocol,
         breedMapper: BreedMapper,
     ) {
         self.navController = navController
         
         self.repository = SplashRepository(
             apiService: apiService,
+            persistenceStore: persistenceStore,
             breedMapper: breedMapper
         )
         
         self.vc = SplashViewController(
-            viewModel: SplashViewModel()
+            viewModel: SplashViewModel(
+                repository: repository,
+            )
         )
     }
     
     func start() {
         vc.coordinator = self
         navController.setViewControllers([vc], animated: true)
-        
-        // TEST CODE:
-        Task {
-            try? await repository.fetchAllBreeds(completion: { _ in })
-        }
     }
     
     func end() {
         parentCoordinator?.childDidFinish(self)
     }
     
-    func startTimer() {
+    func startSwitchTimer() {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] _ in
             Logger.viewcycle.debug("Auto-switching to Search Screen")
             self?.parentCoordinator?.showSearchScreen()

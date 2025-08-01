@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxCocoa
 
 protocol SplashViewModelProtocol {
-    
+    var loadingState: Driver<LoadingState> { get }
 }

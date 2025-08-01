@@ -16,11 +16,13 @@ final class MainCoordinator: CoordinatorProtocol {
     
     private let networkClient: NetworkClientProtocol
     private let apiService: TheDogApiServiceProtocol
+    private let persistenceStore: PersistenceStoreProtocol
     private let breedMapper: BreedMapper
     
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController) throws {
         self.navController = navController
-        
+    
+        self.persistenceStore = try PersistenceStore()
         self.networkClient = AlamofireNetworkClient()
         self.apiService = TheDogApiService(networkClient: networkClient)
         self.breedMapper = BreedMapper()
@@ -43,6 +45,7 @@ final class MainCoordinator: CoordinatorProtocol {
         let child = SplashCoordinator(
             navController: navController,
             apiService: apiService,
+            persistenceStore: persistenceStore,
             breedMapper: breedMapper,
         )
         childCoordinators.append(child)

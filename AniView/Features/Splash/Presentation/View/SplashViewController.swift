@@ -27,7 +27,7 @@ final class SplashViewController: UIViewController {
         super.viewDidLoad()
         setupUi()
         setupConstraints()
-        coordinator?.startTimer()
+        coordinator?.startSwitchTimer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

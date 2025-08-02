@@ -349,12 +349,32 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
         cuckoo_manager.enableDefaultStubImplementation()
     }
     
+    var labelTitle: Driver<String> {
+        get {
+            return cuckoo_manager.getter(
+                "labelTitle",
+                superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+                defaultCall: __defaultImplStub!.labelTitle
+            )
+        }
+    }
+    
     var loadingState: Driver<LoadingState> {
         get {
             return cuckoo_manager.getter(
                 "loadingState",
                 superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
                 defaultCall: __defaultImplStub!.loadingState
+            )
+        }
+    }
+    
+    var iconTick: Driver<String> {
+        get {
+            return cuckoo_manager.getter(
+                "iconTick",
+                superclassCall: Cuckoo.MockManager.crashOnProtocolSuperclassCall(),
+                defaultCall: __defaultImplStub!.iconTick
             )
         }
     }
@@ -367,8 +387,16 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
             self.cuckoo_manager = manager
         }
         
+        var labelTitle: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSplashViewModelProtocol,Driver<String>> {
+            return .init(manager: cuckoo_manager, name: "labelTitle")
+        }
+        
         var loadingState: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSplashViewModelProtocol,Driver<LoadingState>> {
             return .init(manager: cuckoo_manager, name: "loadingState")
+        }
+        
+        var iconTick: Cuckoo.ProtocolToBeStubbedReadOnlyProperty<MockSplashViewModelProtocol,Driver<String>> {
+            return .init(manager: cuckoo_manager, name: "iconTick")
         }
     }
 
@@ -383,17 +411,37 @@ class MockSplashViewModelProtocol: SplashViewModelProtocol, Cuckoo.ProtocolMock,
             self.sourceLocation = sourceLocation
         }
         
+        var labelTitle: Cuckoo.VerifyReadOnlyProperty<Driver<String>> {
+            return .init(manager: cuckoo_manager, name: "labelTitle", callMatcher: callMatcher, sourceLocation: sourceLocation)
+        }
+        
         var loadingState: Cuckoo.VerifyReadOnlyProperty<Driver<LoadingState>> {
             return .init(manager: cuckoo_manager, name: "loadingState", callMatcher: callMatcher, sourceLocation: sourceLocation)
+        }
+        
+        var iconTick: Cuckoo.VerifyReadOnlyProperty<Driver<String>> {
+            return .init(manager: cuckoo_manager, name: "iconTick", callMatcher: callMatcher, sourceLocation: sourceLocation)
         }
     }
 }
 
 class SplashViewModelProtocolStub:SplashViewModelProtocol, @unchecked Sendable {
     
+    var labelTitle: Driver<String> {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Driver<String>).self)
+        }
+    }
+    
     var loadingState: Driver<LoadingState> {
         get {
             return DefaultValueRegistry.defaultValue(for: (Driver<LoadingState>).self)
+        }
+    }
+    
+    var iconTick: Driver<String> {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Driver<String>).self)
         }
     }
 

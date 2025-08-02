@@ -9,5 +9,7 @@ import Foundation
 import RxCocoa
 
 protocol SplashViewModelProtocol {
+    var labelTitle: Driver<String> { get }
     var loadingState: Driver<LoadingState> { get }
+    var iconTick: Driver<String> { get }
 }

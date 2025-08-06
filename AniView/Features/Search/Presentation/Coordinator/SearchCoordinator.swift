@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class SearchCoordinator: CoordinatorProtocol {
     var childCoordinators = [CoordinatorProtocol]()
@@ -13,15 +14,24 @@ class SearchCoordinator: CoordinatorProtocol {
     weak var parentCoordinator: MainCoordinator?
     
     private var vc: SearchViewController
+    private var repository: SearchRepositoryProtocol
     
-    init(navController: UINavigationController) {
+    init(
+        navController: UINavigationController,
+        persistenceStore: PersistenceStoreProtocol,
+    ) {
         self.navController = navController
         
-        self.vc = SearchViewController(viewModel: SearchViewModel())
+        self.repository = SearchRepository(persistenceStore: persistenceStore)
+        self.vc = SearchViewController(viewModel: SearchViewModel(repository: repository))
     }
     
     func start() {
         vc.coordinator = self
         navController.setViewControllers([vc], animated: true)
+    }
+    
+    func showDetailedView(breedId: Int) {
+        parentCoordinator?.showDetailsScreen(forBreed: breedId)
     }
 }

@@ -7,10 +7,14 @@
 
 import UIKit
 import OSLog
+import RxSwift
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let viewModel: SearchViewModel
     var coordinator: SearchCoordinator?
+    
+    private var searchResults = [SearchResult]()
+    private let disposeBag = DisposeBag()
     
     private let topBar = UIStackView()
     private let labelAppTitle = UILabel.body(text: "AniView")
@@ -33,7 +37,27 @@ final class SearchViewController: UIViewController {
     }
     
     private func configureBindings() {
-
+        viewModel
+            .searchResults
+            .drive(onNext: { [weak self] results in
+                self?.searchResults = results
+                self?.resultsTable.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        textfieldSearch.rx.text.orEmpty
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in self?.onSearchTextChanged() })
+            .disposed(by: disposeBag)
+        
+        buttonRandom.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                Task {
+                    let breedId = await self?.viewModel.randomBreed()
+                    self?.coordinator?.showDetailedView(breedId: breedId ?? -1)
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setupUi() {
@@ -56,7 +80,9 @@ final class SearchViewController: UIViewController {
         topBar.addArrangedSubview(buttonRandom)
         
         resultsTable.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        resultsTable.backgroundColor = .blue
+        resultsTable.delegate = self
+        resultsTable.dataSource = self
+        
         view.addSubview(resultsTable)
     }
     
@@ -71,5 +97,23 @@ final class SearchViewController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(AppSpacing.medium)
             make.bottom.equalToSuperview().inset(AppSpacing.large)
         }
+    }
+    
+    @objc private func onSearchTextChanged() {
+        viewModel.search(for: textfieldSearch.text ?? "")
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.showDetailedView(breedId: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
+        cell.textLabel!.text = searchResults[indexPath.row].name
+        return cell
     }
 }

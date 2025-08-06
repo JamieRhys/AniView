@@ -56,11 +56,16 @@ final class MainCoordinator: CoordinatorProtocol {
     
     func showSearchScreen() {
         let child = SearchCoordinator(
-            navController: navController
+            navController: navController,
+            persistenceStore: persistenceStore,
         )
         childCoordinators.append(child)
         child.parentCoordinator = self
         child.start()
         Logger.viewcycle.debug("Showing Search Screen")
+    }
+    
+    func showDetailsScreen(forBreed id: Int) {
+        Logger.viewcycle.debug("Showing Details Screen for breed \(id)")
     }
 }

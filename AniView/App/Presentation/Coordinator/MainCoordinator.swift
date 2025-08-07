@@ -66,6 +66,14 @@ final class MainCoordinator: CoordinatorProtocol {
     }
     
     func showDetailsScreen(forBreed id: Int) {
-        Logger.viewcycle.debug("Showing Details Screen for breed \(id)")
+        do {
+            let result = try persistenceStore.fetch(RealmBreed.self, filter: NSPredicate(format: "id == %@", NSNumber(value: id)))
+            let breed = breedMapper.toDomain(from: result.first!)
+            
+            Logger.statistics.debug("Showing Details for breed \(breed.name)")
+        } catch {
+            Logger.statistics.error(error.localizedDescription)
+            showSearchScreen()
+        }
     }
 }

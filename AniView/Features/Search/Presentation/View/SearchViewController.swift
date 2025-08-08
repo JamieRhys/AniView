@@ -104,7 +104,7 @@ final class SearchViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.showDetailedView(breedId: indexPath.row)
+        coordinator?.showDetailedView(breedId: searchResults[indexPath.row].id)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -22,18 +22,16 @@ let project = Project(
                 ],
                 "UILaunchStoryboardName": "LaunchScreen",
             ]),
-            buildableFolders: [
-                "AniView/Sources",
-                "AniView/Resources",
+            sources: [
+                "AniView/Sources/**",
+            ],
+            resources: [
+                "AniView/Resources/**",
             ],
             dependencies: [
                 .project(target: "Core", path: "Projects/Core"),
                 .project(target: "DesignSystem", path: "Projects/DesignSystem"),
                 .project(target: "Splash", path: "Projects/Features/Splash"),
-                
-                .external(name: "RxSwift"),
-                .external(name: "RxCocoa"),
-                .external(name: "SnapKit"),
             ]
         ),
         .target(
@@ -42,10 +40,23 @@ let project = Project(
             product: .unitTests,
             bundleId: "uk.co.jaffakree.AniViewTests",
             infoPlist: .default,
-            buildableFolders: [
-                "AniView/Tests"
+            sources: [
+                "AniView/Tests/**"
             ],
             dependencies: [.target(name: "AniView")]
         ),
+        .target(
+            name: "AniViewUITests",
+            destinations: .iOS,
+            product: .uiTests,
+            bundleId: "uk.co.jaffakree.AniViewUITests",
+            infoPlist: .default,
+            sources: [
+                "AniView/UITests/**"
+            ],
+            dependencies: [
+                .target(name: "AniView")
+            ]
+        )
     ]
 )

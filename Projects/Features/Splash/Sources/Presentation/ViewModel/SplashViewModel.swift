@@ -17,7 +17,7 @@ public final class SplashViewModel {
 
     private struct ViewState {
         let loadingState = BehaviorRelay<LoadingState>(value: LoadingState.loading)
-        let titleLabel = BehaviorRelay<String>(value: String(localized: "appName", bundle: #bundle))
+        let titleLabel = BehaviorRelay<String>(value: String(localized: "appName", bundle: .module))
         let tickIcon = BehaviorRelay<String>(value: String("checkmark.circle"))
     }
     

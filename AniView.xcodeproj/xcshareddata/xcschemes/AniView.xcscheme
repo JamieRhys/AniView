@@ -39,6 +39,16 @@
                ReferencedContainer = "container:AniView.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F302A3B8DCCD1E97B815A57"
+               BuildableName = "AniViewUITests.xctest"
+               BlueprintName = "AniViewUITests"
+               ReferencedContainer = "container:AniView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

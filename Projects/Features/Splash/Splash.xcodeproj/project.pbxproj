@@ -10,21 +10,12 @@
 		0DF7ED44D6EDA74326A2783D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C64668D4943043B1265305F /* XCTest.framework */; };
 		107ACDF4ABD93EB0A3C31A83 /* TuistBundle+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06624919EEAFCB44B8530695 /* TuistBundle+Splash.swift */; };
 		11CAE5C4212B50EC6B2CE8EB /* SnapKit_SnapKit.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C9A4E9ED1BFE7B68BA66C3EB /* SnapKit_SnapKit.bundle */; };
-		13CBF10962CDC6AD452E2518 /* RxSwift_RxRelay.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 472038F2BC8FC883A1A90ED4 /* RxSwift_RxRelay.bundle */; };
 		14269EC781DB09E996094AC0 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6312AF98FFE82F3907032648 /* SplashCoordinator.swift */; };
 		14F47718604A1E687BD74B46 /* SplashCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E8824B240BFEDF4A821E9 /* SplashCoordinatorTests.swift */; };
 		29E843CD90B418A16B0A020B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F5C5E197DE13F0774C7951 /* SnapKit.framework */; };
 		2F4C18BF133C72AA165DAD50 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F75014A12490200599802C3 /* RxSwift.framework */; };
-		36D52AAA0396241A06D66DFD /* Splash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 172B7E40C8BCC9D55F773295 /* Splash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3F5B5488B14096D89592A63B /* RxSwift_RxCocoaRuntime.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E7ED6773E9FE4B67F0797 /* RxSwift_RxCocoaRuntime.bundle */; };
-		41C634A0240DBD257B3E2E94 /* RxSwift_RxCocoaRuntime.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1E6E7ED6773E9FE4B67F0797 /* RxSwift_RxCocoaRuntime.bundle */; };
 		4F69553537124BCB09F1700E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A43D4CF2493BBE19E4A51C5 /* RxCocoa.framework */; };
 		54B699E1F5A16C760949D187 /* RxCocoaRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7845449C79BD42AE777F8BCD /* RxCocoaRuntime.framework */; };
-		5CDCF5935DB07C6DFDF883BC /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F75014A12490200599802C3 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E3ADFA54B76D0E6A064D90F /* RxSwift_RxCocoa.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D59C3DF06F28355F925280E /* RxSwift_RxCocoa.bundle */; };
-		5F8A3B6F076F101994D08FEA /* AniView.app in Dependencies */ = {isa = PBXBuildFile; fileRef = 0387F0FACB080EDB6850C1D4 /* AniView.app */; };
-		638D365D891E6F8AD05F4796 /* SnapKit_SnapKit.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C9A4E9ED1BFE7B68BA66C3EB /* SnapKit_SnapKit.bundle */; };
-		69E92AAF8F30E6BF960B5169 /* Splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172B7E40C8BCC9D55F773295 /* Splash.framework */; };
 		6BFA301F14A43F4675A43A14 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FC5D093D4BE39C47195616E6 /* Localizable.xcstrings */; };
 		785E35849C48E7D4A8A53361 /* RxSwift_RxCocoaRuntime.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E7ED6773E9FE4B67F0797 /* RxSwift_RxCocoaRuntime.bundle */; };
 		79D800E94F1DFE20B79AF542 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C418F0EB3A66D969A67CC4AE /* RxTest.framework */; };
@@ -34,12 +25,8 @@
 		99268A10E73A26245D40108E /* SnapKit_SnapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9A4E9ED1BFE7B68BA66C3EB /* SnapKit_SnapKit.bundle */; };
 		9AFDAB7CA0F4CBA5D27DFA75 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51C125EA017B51F416BBED /* RxRelay.framework */; };
 		A31EF89B68C04A21589321AC /* RxSwift_RxCocoaRuntime.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1E6E7ED6773E9FE4B67F0797 /* RxSwift_RxCocoaRuntime.bundle */; };
-		A329176341364E199DC4469B /* RxSwift_RxRelay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 472038F2BC8FC883A1A90ED4 /* RxSwift_RxRelay.bundle */; };
 		A87C8BD2ADCFB53DF6BF4E71 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13FB1E0E16409FD1D8FB8C /* SplashViewController.swift */; };
-		B7E70C1DF82EF2341AA921F1 /* RxSwift_RxCocoa.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0D59C3DF06F28355F925280E /* RxSwift_RxCocoa.bundle */; };
 		BAFA6A341AF31DB356B12E7E /* RxSwift_RxCocoa.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0D59C3DF06F28355F925280E /* RxSwift_RxCocoa.bundle */; };
-		D2C9420BDF34756366B3EF62 /* SnapKit_SnapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9A4E9ED1BFE7B68BA66C3EB /* SnapKit_SnapKit.bundle */; };
-		DA6712673514C350B08F30F9 /* SplashControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DEBD92B61ABD250F883E5E /* SplashControllerTests.swift */; };
 		DD362DF60C9A235B592432B9 /* RxSwift_RxCocoa.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D59C3DF06F28355F925280E /* RxSwift_RxCocoa.bundle */; };
 		DF52D4A4931B6CD4E153E135 /* SplashViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FA8DCF68AB0D32C3F08FC /* SplashViewModelProtocol.swift */; };
 		E04A35CA81272E12ED02E68B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F75014A12490200599802C3 /* RxSwift.framework */; };
@@ -57,30 +44,9 @@
 			remoteGlobalIDString = B281B9912FBE9374CDC0824D;
 			remoteInfo = Splash;
 		};
-		9F1DC2431C0D6C41B27B18E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 64E07370B03767FF0BC4F984 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B281B9912FBE9374CDC0824D;
-			remoteInfo = Splash;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		07A8856FDF055B9C2011C6DB /* Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstSubfolderSpec = 16;
-			files = (
-				5F8A3B6F076F101994D08FEA /* AniView.app in Dependencies */,
-				B7E70C1DF82EF2341AA921F1 /* RxSwift_RxCocoa.bundle in Dependencies */,
-				41C634A0240DBD257B3E2E94 /* RxSwift_RxCocoaRuntime.bundle in Dependencies */,
-				13CBF10962CDC6AD452E2518 /* RxSwift_RxRelay.bundle in Dependencies */,
-				638D365D891E6F8AD05F4796 /* SnapKit_SnapKit.bundle in Dependencies */,
-			);
-			name = Dependencies;
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		B14199C785983204A443DB2F /* Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 8;
@@ -93,18 +59,6 @@
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		B40BDD814A327FC750B93DF4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				5CDCF5935DB07C6DFDF883BC /* RxSwift.framework in Embed Frameworks */,
-				36D52AAA0396241A06D66DFD /* Splash.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CDB6AC6C2EEE391650BE903E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -130,14 +84,12 @@
 
 /* Begin PBXFileReference section */
 		00F5C5E197DE13F0774C7951 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0387F0FACB080EDB6850C1D4 /* AniView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06624919EEAFCB44B8530695 /* TuistBundle+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Splash.swift"; sourceTree = "<group>"; };
 		0D59C3DF06F28355F925280E /* RxSwift_RxCocoa.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_RxCocoa.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		172B7E40C8BCC9D55F773295 /* Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6E7ED6773E9FE4B67F0797 /* RxSwift_RxCocoaRuntime.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_RxCocoaRuntime.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C64668D4943043B1265305F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		30F89F29107A1DBCEC0BCC75 /* Splash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Splash-Info.plist"; sourceTree = "<group>"; };
-		3E0BAC78B3DF14EEC80AB5A3 /* SplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4098456DD3A8AEB05DCAD070 /* RxBlocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxBlocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472038F2BC8FC883A1A90ED4 /* RxSwift_RxRelay.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_RxRelay.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F109450C08B180CDC044625 /* Cuckoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cuckoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,11 +104,9 @@
 		A43FA8DCF68AB0D32C3F08FC /* SplashViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelProtocol.swift; sourceTree = "<group>"; };
 		ABEB4049F202F4FC7A2BEDFB /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
 		AE51C125EA017B51F416BBED /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1DEBD92B61ABD250F883E5E /* SplashControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashControllerTests.swift; sourceTree = "<group>"; };
 		C418F0EB3A66D969A67CC4AE /* RxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A4E9ED1BFE7B68BA66C3EB /* SnapKit_SnapKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapKit_SnapKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6E26C40601FF4E5B3A1698 /* SplashTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SplashTests-Info.plist"; sourceTree = "<group>"; };
-		EA72C797D84090BC4A283E70 /* SplashUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SplashUITests-Info.plist"; sourceTree = "<group>"; };
 		FC5D093D4BE39C47195616E6 /* Localizable.xcstrings */ = {isa = PBXFileReference; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,14 +120,6 @@
 				9AFDAB7CA0F4CBA5D27DFA75 /* RxRelay.framework in Frameworks */,
 				2F4C18BF133C72AA165DAD50 /* RxSwift.framework in Frameworks */,
 				29E843CD90B418A16B0A020B /* SnapKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		799B1EF8C3C051C5CAE3CB4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69E92AAF8F30E6BF960B5169 /* Splash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +163,6 @@
 				F13599871CE061A8A75165C8 /* Resources */,
 				E577B0DEACDB06CCCD5966F9 /* Sources */,
 				5F703F347F1840448FDFBF32 /* Tests */,
-				8E4F2DF5B469B5EC53899F61 /* UITests */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -240,14 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				06624919EEAFCB44B8530695 /* TuistBundle+Splash.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		1ED3EEE09A70289671DAE94D /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				D8AD09B69EB800CBB4BADB65 /* Presentation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -272,7 +205,6 @@
 		43101B3CE9E7A97A0264617F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0387F0FACB080EDB6850C1D4 /* AniView.app */,
 				4F109450C08B180CDC044625 /* Cuckoo.framework */,
 				4098456DD3A8AEB05DCAD070 /* RxBlocking.framework */,
 				6A43D4CF2493BBE19E4A51C5 /* RxCocoa.framework */,
@@ -287,7 +219,6 @@
 				00F5C5E197DE13F0774C7951 /* SnapKit.framework */,
 				172B7E40C8BCC9D55F773295 /* Splash.framework */,
 				613B0441F48639EDFE7622DF /* SplashTests.xctest */,
-				3E0BAC78B3DF14EEC80AB5A3 /* SplashUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,14 +265,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8E4F2DF5B469B5EC53899F61 /* UITests */ = {
-			isa = PBXGroup;
-			children = (
-				1ED3EEE09A70289671DAE94D /* Sources */,
-			);
-			path = UITests;
-			sourceTree = "<group>";
-		};
 		A0D3EFF523487ED8A163CC6E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,30 +273,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B3FB5B040F8766F327CBC49D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B1DEBD92B61ABD250F883E5E /* SplashControllerTests.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D6C218A566BC8743765D2330 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
 				30F89F29107A1DBCEC0BCC75 /* Splash-Info.plist */,
 				CB6E26C40601FF4E5B3A1698 /* SplashTests-Info.plist */,
-				EA72C797D84090BC4A283E70 /* SplashUITests-Info.plist */,
 			);
 			path = InfoPlists;
-			sourceTree = "<group>";
-		};
-		D8AD09B69EB800CBB4BADB65 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				B3FB5B040F8766F327CBC49D /* View */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		E577B0DEACDB06CCCD5966F9 /* Sources */ = {
@@ -445,28 +351,6 @@
 			productReference = 172B7E40C8BCC9D55F773295 /* Splash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E3E078AF878C3694B844B005 /* SplashUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 234184B7CFDEC21960660A58 /* Build configuration list for PBXNativeTarget "SplashUITests" */;
-			buildPhases = (
-				B8C1AB38564E3883CFD28078 /* Sources */,
-				1C1947943FEC0C2D53E28C7B /* Resources */,
-				799B1EF8C3C051C5CAE3CB4A /* Frameworks */,
-				B40BDD814A327FC750B93DF4 /* Embed Frameworks */,
-				07A8856FDF055B9C2011C6DB /* Dependencies */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F6F95FBC724EC5644E830087 /* PBXTargetDependency */,
-			);
-			name = SplashUITests;
-			packageProductDependencies = (
-			);
-			productName = SplashUITests;
-			productReference = 3E0BAC78B3DF14EEC80AB5A3 /* SplashUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -492,7 +376,6 @@
 			targets = (
 				B281B9912FBE9374CDC0824D /* Splash */,
 				9165A57EA536D2AB06CC46C8 /* SplashTests */,
-				E3E078AF878C3694B844B005 /* SplashUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -503,17 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BFA301F14A43F4675A43A14 /* Localizable.xcstrings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C1947943FEC0C2D53E28C7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E3ADFA54B76D0E6A064D90F /* RxSwift_RxCocoa.bundle in Resources */,
-				3F5B5488B14096D89592A63B /* RxSwift_RxCocoaRuntime.bundle in Resources */,
-				A329176341364E199DC4469B /* RxSwift_RxRelay.bundle in Resources */,
-				D2C9420BDF34756366B3EF62 /* SnapKit_SnapKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,14 +424,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8C1AB38564E3883CFD28078 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA6712673514C350B08F30F9 /* SplashControllerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -568,12 +432,6 @@
 			name = Splash;
 			target = B281B9912FBE9374CDC0824D /* Splash */;
 			targetProxy = 75BE3D34B4E4F469435B3749 /* PBXContainerItemProxy */;
-		};
-		F6F95FBC724EC5644E830087 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Splash;
-			target = B281B9912FBE9374CDC0824D /* Splash */;
-			targetProxy = 9F1DC2431C0D6C41B27B18E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -674,82 +532,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		82824158DB8C3FE5A6FC5EC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../../Tuist/.build/checkouts/RxSwift/Sources/RxCocoaRuntime/include",
-				);
-				INFOPLIST_FILE = "Derived/InfoPlists/SplashUITests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/.build/tuist-derived/RxCocoaRuntime/RxCocoaRuntime.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/.build/tuist-derived/RxCocoaRuntime/RxCocoaRuntime.modulemap",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.jaffakree.AniView.SplashUITests;
-				PRODUCT_NAME = SplashUITests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		8C12D66E3AA956F632B7A964 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../../Tuist/.build/checkouts/RxSwift/Sources/RxCocoaRuntime/include",
-				);
-				INFOPLIST_FILE = "Derived/InfoPlists/SplashUITests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/.build/tuist-derived/RxCocoaRuntime/RxCocoaRuntime.modulemap",
-				);
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Xcc",
-					"-fmodule-map-file=$(SRCROOT)/../../../Tuist/.build/tuist-derived/RxCocoaRuntime/RxCocoaRuntime.modulemap",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.jaffakree.AniView.SplashUITests;
-				PRODUCT_NAME = SplashUITests;
-				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
-				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		AAA49EF81526283291E08BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -952,15 +734,6 @@
 			buildConfigurations = (
 				AAA49EF81526283291E08BDD /* Debug */,
 				CAEA9F55759E087E5395F057 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		234184B7CFDEC21960660A58 /* Build configuration list for PBXNativeTarget "SplashUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C12D66E3AA956F632B7A964 /* Debug */,
-				82824158DB8C3FE5A6FC5EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

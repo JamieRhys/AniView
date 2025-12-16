@@ -73,6 +73,8 @@ class SplashViewController: UIViewController {
     }
     
     private func setupUi() {
+        view.backgroundColor = Colors.background
+        
         titleLabel.textInsets = UIEdgeInsets(
             top: 0,
             left: 0,

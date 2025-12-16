@@ -32,17 +32,17 @@ let project = Project(
                 ProjectDescription.TargetDependency.xctest
             ],
         ),
-        .target(
-            name: "SplashUITests",
-            destinations: .iOS,
-            product: .uiTests,
-            bundleId: "uk.co.jaffakree.AniView.SplashUITests",
-            infoPlist: .default,
-            sources: ["UITests/Sources/**"],
-            dependencies: [
-                .target(name: "Splash"),
-                .project(target: "AniView", path: "../../../"),
-            ],
-        )
+//        .target(
+//            name: "SplashUITests",
+//            destinations: .iOS,
+//            product: .uiTests,
+//            bundleId: "uk.co.jaffakree.AniView.SplashUITests",
+//            infoPlist: .default,
+//            sources: ["UITests/Sources/**"],
+//            dependencies: [
+//                .target(name: "Splash"),
+//                .project(target: "AniView", path: "../../../"),
+//            ],
+//        )
     ]
 )

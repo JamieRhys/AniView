@@ -42,6 +42,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F302A3B8DCCD1E97B815A57"
+               BuildableName = "AniViewUITests.xctest"
+               BlueprintName = "AniViewUITests"
+               ReferencedContainer = "container:AniView.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B90FCF66245CD7327BEE2CBF"
                BuildableName = "Core.framework"
                BlueprintName = "Core"
@@ -258,20 +272,6 @@
                ReferencedContainer = "container:Projects/Features/Splash/Splash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3E078AF878C3694B844B005"
-               BuildableName = "SplashUITests.xctest"
-               BlueprintName = "SplashUITests"
-               ReferencedContainer = "container:Projects/Features/Splash/Splash.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -296,10 +296,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9165A57EA536D2AB06CC46C8"
-               BuildableName = "SplashTests.xctest"
-               BlueprintName = "SplashTests"
-               ReferencedContainer = "container:Projects/Features/Splash/Splash.xcodeproj">
+               BlueprintIdentifier = "3F302A3B8DCCD1E97B815A57"
+               BuildableName = "AniViewUITests.xctest"
+               BlueprintName = "AniViewUITests"
+               ReferencedContainer = "container:AniView.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -307,9 +307,9 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3E078AF878C3694B844B005"
-               BuildableName = "SplashUITests.xctest"
-               BlueprintName = "SplashUITests"
+               BlueprintIdentifier = "9165A57EA536D2AB06CC46C8"
+               BuildableName = "SplashTests.xctest"
+               BlueprintName = "SplashTests"
                ReferencedContainer = "container:Projects/Features/Splash/Splash.xcodeproj">
             </BuildableReference>
          </TestableReference>

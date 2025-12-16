@@ -39,17 +39,6 @@
                ReferencedContainer = "container:Splash.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3E078AF878C3694B844B005"
-               BuildableName = "SplashUITests.xctest"
-               BlueprintName = "SplashUITests"
-               ReferencedContainer = "container:Splash.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
